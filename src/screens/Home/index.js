@@ -7,7 +7,9 @@ import {
   Image,
   Text,
 } from 'react-native';
-import Feather from 'react-native-vector-icons/Feather';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 // import Modal from '../Modal';
 import styles from './styles';
 
@@ -58,18 +60,77 @@ class Home extends Component {
           }}>
           <View style={{flex: 1}} />
           <TouchableOpacity
-            style={{
-              width: 60,
-              height: 40,
-              backgroundColor: 'white',
-            }}></TouchableOpacity>
-          <TouchableOpacity
-            style={{
-              width: 60,
-              height: 40,
-            }}>
-            <Feather name="volume" size={20} />
+            style={[
+              styles.buttonContainer,
+              {backgroundColor: 'white', marginBottom: 10},
+            ]}>
+            <AntDesign name="plus" size={30} color="pink" />
           </TouchableOpacity>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              height: 70,
+            }}>
+            <TouchableOpacity style={styles.buttonContainer}>
+              <MaterialCommunityIcons
+                name="volume-mute"
+                size={40}
+                color="white"
+              />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer}>
+              <Ionicons name="ios-flash-off" size={40} color="white" />
+            </TouchableOpacity>
+            <View style={{flex: 1}} />
+            <TouchableOpacity
+              style={[styles.buttonContainer, {marginRight: 20}]}>
+              <Ionicons name="ios-reverse-camera" size={40} color="white" />
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
+              position: 'absolute',
+              alignSelf: 'center',
+              bottom: 20,
+            }}>
+            <View
+              style={{
+                borderWidth: 6,
+                borderColor: 'white',
+                borderRadius: 41,
+              }}>
+              <TouchableOpacity
+                style={{
+                  width: 50,
+                  height: 50,
+                  borderRadius: 25,
+                  backgroundColor: 'red',
+                  margin: 3,
+                }}></TouchableOpacity>
+            </View>
+            <Text
+              style={{
+                color: 'white',
+                fontWeight: 'bold',
+                marginTop: 5,
+                alignSelf: 'center',
+              }}>
+              {'B-ROLL'}
+            </Text>
+          </View>
+          <View
+            style={{
+              width: '40%',
+              position: 'absolute',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              bottom: 20,
+              right: 0,
+            }}>
+            <Text style={{color: 'white'}}>INTERVIEW</Text>
+            <Text style={{color: 'white'}}>PHOTO</Text>
+          </View>
         </View>
         {/* <Modal
             isVisible={this.state.isModalVisible}

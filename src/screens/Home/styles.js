@@ -46,6 +46,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
   },
+  buttonContainer: {
+    width: 50,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+  },
 });
 
 export default styles;
